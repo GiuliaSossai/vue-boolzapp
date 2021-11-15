@@ -21,7 +21,7 @@ body {
    display: flex;
 }
 
-/* parte sinistra */
+/* PARTE SINISTRA */
 .wrap-left {
    width: 35%;
    height: 100%;
@@ -29,14 +29,34 @@ body {
    border-right: 1px solid #c8c8c8;
 }
 
-.notifiche {
-   height: 80px;
-   background-color: #8DDBFD;
+.wrap-left .wrap-top h4 {
+   font-size: 20px;
 }
 
 
+/* notifiche */
+.notifiche {
+   height: 80px;
+   background-color: #8DDBFD;
+   display: flex;
+   align-items: center;
+   padding: 0 20px;
+}
 
-/* parte destra */
+.notifiche i {
+   color: #8DDBFD;
+   font-size: 25px;
+   font-weight: bold;
+   padding: 15px;
+   border-radius: 50%;
+   background-color: #F1FBFE;
+}
+
+.notifiche p {
+   text-decoration: underline;
+}
+
+/* PARTE DESTRA */
 .wrap-right {
    width: 65%;
    height: 100%;
@@ -52,6 +72,7 @@ body {
    padding: 0 20px;
    font-size: 25px;
 }
+
 
 /* parte top */
 .wrap-top {
@@ -92,6 +113,7 @@ body {
 .wrap-top i {
    padding: 5px;
 }
+
 
 /* parte centrale */
 .chat-box {
