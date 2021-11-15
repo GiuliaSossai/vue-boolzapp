@@ -11,7 +11,9 @@
    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-   <!-- wrap principale -->
+
+   <div id="app">
+      <!-- wrap principale -->
    <div class="main-wrap">
 
       <!-- parte sinistra -->
@@ -58,7 +60,28 @@
           </div>
 
           <!-- cronologia -->
-          <div class="chat-list"></div>
+          <div class="chat-list">
+             <ul>
+                <li
+                  v-for="(contact, index) in contacts"
+                >
+                  <div class="user-info">
+                     <div class="user-image">
+                        <img 
+                           :src=" 'assets/img/avatar' + contact.avatar + '.jpg'" 
+                           :alt="contact.nome"
+                        >
+         
+                     </div>
+                     <div class="user-text">
+                        <h4>{{contact.nome}}</h4>
+                        <p>{{contact.messages.text}}</p>
+                     </div>
+                     <p class="date">{{contact.messages.date}}</p>
+                  </div> 
+                </li>
+             </ul>
+          </div>
       </div>
 
       <!-- parte destra -->
@@ -96,6 +119,8 @@
          </div>
       </div>
    </div>
+   </div>
+   
    
 
 
