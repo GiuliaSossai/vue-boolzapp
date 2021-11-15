@@ -7,6 +7,7 @@
 body {
    height: 100vh;
    background-image: linear-gradient(#259687 150px, #DDDBD2 0px, #D2DBDB 100%);
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
    display: flex;
    align-items: center;
 }
@@ -20,6 +21,7 @@ body {
    display: flex;
 }
 
+/* parte sinistra */
 .wrap-left {
    width: 35%;
    height: 100%;
@@ -27,6 +29,14 @@ body {
    border-right: 1px solid #c8c8c8;
 }
 
+.notifiche {
+   height: 80px;
+   background-color: #8DDBFD;
+}
+
+
+
+/* parte destra */
 .wrap-right {
    width: 65%;
    height: 100%;
@@ -38,17 +48,69 @@ body {
    height: 80px;
    display: flex;
    justify-content: space-between;
+   align-items: center;
+   padding: 0 20px;
+   font-size: 25px;
 }
 
+/* parte top */
 .wrap-top {
    background-color: #EAEBEA;
+   color: #B1B1B1;
 }
 
-.wrap-bottom {
-   background-color: #F3EFE9;
+.user-image, .user-text {
+   display: inline-block;
 }
 
+.user-image {
+   width: 60px;
+   border-radius: 50%;
+   overflow: hidden;
+   vertical-align: middle;
+}
+
+.user-image img {
+   width: 100%;
+}
+
+.user-text {
+   font-size: 15px;
+   vertical-align: middle;
+   margin-left: 10px;
+}
+
+.user-text h4 {
+   color: #000;
+   margin-bottom: 5px;
+}
+
+.user-text p {
+   color: #6B7375;
+}
+
+.wrap-top i {
+   padding: 5px;
+}
+
+/* parte centrale */
 .chat-box {
    height: calc(100% - 160px);
    background-image: url(/assets/img/mine.jpg);
+}
+
+
+
+
+/* parte bottom */
+.wrap-bottom {
+   background-color: #F3EFE9;
+   color: #6B7376;   
+}
+
+input {
+   border-radius: 8px;
+   width: 80%;
+   padding: 20px;
+   border: none;
 }
