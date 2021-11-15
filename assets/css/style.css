@@ -41,6 +41,7 @@ body {
    display: flex;
    align-items: center;
    padding: 0 20px;
+   margin-bottom: 5px;
 }
 
 .notifiche i {
@@ -55,6 +56,46 @@ body {
 .notifiche p {
    text-decoration: underline;
 }
+
+/* input box */
+.input-box {
+   width: 95%;
+   margin: auto;
+   background-color: #fff;
+   display: flex;
+   align-items: center;
+}
+
+.search-icon, .input-box input {
+   display: inline-block;
+}
+
+.search-icon i {
+   font-size: 20px;
+   color: #b5b4af;   
+}
+
+.search-icon {
+   text-align: center;
+   width: 20%;
+}
+
+.input-box input {
+   width: 80%;
+   border: none;
+   padding: 10px 20px;
+   font-weight: bold;  
+}
+
+.input-box input::placeholder {
+   color: #cdcece;
+}
+
+
+
+
+
+
 
 /* PARTE DESTRA */
 .wrap-right {
@@ -130,9 +171,13 @@ body {
    color: #6B7376;   
 }
 
-input {
+.wrap-bottom input {
    border-radius: 8px;
    width: 80%;
    padding: 20px;
    border: none;
+}
+
+.wrap-bottom input::placeholder {
+   color: #BABABA;
 }
