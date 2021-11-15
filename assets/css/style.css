@@ -17,4 +17,38 @@ body {
    height: 90%;
    margin: auto;
    background-color: #fff;
+   display: flex;
+}
+
+.wrap-left {
+   width: 35%;
+   height: 100%;
+   background-color: rgb(138, 119, 119);
+   border-right: 1px solid #c8c8c8;
+}
+
+.wrap-right {
+   width: 65%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+}
+
+.wrap-top, .wrap-bottom {
+   height: 80px;
+   display: flex;
+   justify-content: space-between;
+}
+
+.wrap-top {
+   background-color: #EAEBEA;
+}
+
+.wrap-bottom {
+   background-color: #F3EFE9;
+}
+
+.chat-box {
+   height: calc(100% - 160px);
+   background-image: url(/assets/img/mine.jpg);
 }
