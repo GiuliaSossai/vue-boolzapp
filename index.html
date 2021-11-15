@@ -14,130 +14,131 @@
 
    <div id="app">
       <!-- wrap principale -->
-   <div class="main-wrap">
+      <div class="main-wrap">
 
-      <!-- parte sinistra -->
-      <div class="wrap-left">
+         <!-- PARTE SINISTRA -->
+         <div class="wrap-left">
 
-         <!-- top: utente info -->
-         <div class="wrap-top">
-            <!-- top: parte sinstra/utente -->
-            <div class="user-info">
-               <div class="user-image">
-                  <img src="assets/img/avatar_io.jpg" alt="">
+            <!-- 01 top -->
+            <div class="wrap-top">
+               <!-- parte sinstra: utente -->
+               <div class="user-info">
+                  <div class="user-image">
+                     <img src="assets/img/avatar_io.jpg" alt="">
+                  </div>
+                  <div class="user-text">
+                     <h4>Gaia</h4>
+                  </div>
                </div>
-               <div class="user-text">
-                  <h4>Gaia</h4>
-               </div>
-            </div>
 
-            <!-- parte destra: icone -->
-            <div class="items">
-               <i class="fas fa-circle-notch"></i>
-               <i class="fas fa-comment-alt"></i>
-               <i class="fas fa-ellipsis-v"></i>
-            </div>
-         </div>
-
-         <!-- notifiche -->
-         <div class="notifiche">
-            <div class="user-image">
-               <i class="far fa-bell-slash"></i>
-            </div>
-            <div class="user-text">
-               <h4>Ricevi notifiche di nuovi messaggi</h4>
-               <p>Attiva notifiche desktop</p>
-            </div>   
-         </div>
-
-          <!-- parte delle chat -->
-          <!-- input -->
-          <div class="input-box">
-             <div class="search-icon">
-               <i class="fas fa-search"></i>
-             </div>
-             <input type="text" placeholder="Crea o inizia una nuova chat">
-          </div>
-
-          <!-- cronologia -->
-          <div class="chat-list">
-             <ul>
-                <li
-                  v-for="(contact, index) in contacts"
-                >
-                  <div class="user-info">
-                     <div class="user-image">
-                        <img 
-                           :src=" 'assets/img/avatar' + contact.avatar + '.jpg'" 
-                           :alt="contact.nome"
-                        >
-         
-                     </div>
-                     <div class="user-text">
-                        <h4>{{contact.nome}}</h4>
-                        <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p>
-                     </div>
-                     <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p>
-                  </div> 
-                </li>
-             </ul>
-          </div>
-      </div>
-
-      <!-- parte destra -->
-      <div class="wrap-right">
-
-         <!-- top: utente info -->
-         <div class="wrap-top">
-            <!-- top: parte sinstra/utente -->
-            <div class="user-info">
-               <div class="user-image">
-                  <img src="assets/img/avatar_1.jpg" alt="">
-               </div>
-               <div class="user-text">
-                  <h4>Michele</h4>
-                  <p>lorem</p>
+               <!-- parte destra: icone -->
+               <div class="items">
+                  <i class="fas fa-circle-notch"></i>
+                  <i class="fas fa-comment-alt"></i>
+                  <i class="fas fa-ellipsis-v"></i>
                </div>
             </div>
 
-            <!-- parte destra: icone -->
-            <div class="items">
-               <i class="fas fa-search"></i>
-               <i class="fas fa-paperclip"></i>
-               <i class="fas fa-ellipsis-v"></i>
-            </div>
-         </div>
-
-         <!-- parte centrale con chat messaggi -->
-         <div class="chat-box">
-            <div class="message-row clearfix">
-               <div class="single-message ricevuto">tutto ok?
-                  <p class="date">11/11/11</p>
+            <!-- 02 notifiche -->
+            <div class="notifiche">
+               <div class="item-bg">
+                  <i class="far fa-bell-slash"></i>
                </div>
+               <div class="item-text">
+                  <h4>Ricevi notifiche di nuovi messaggi</h4>
+                  <p>Attiva notifiche desktop</p>
+               </div>   
+            </div>
+
+            <!-- 03 input -->
+            <div class="input-box">
+               <div class="search-icon">
+                  <i class="fas fa-search"></i>
+               </div>
+               <input type="text" placeholder="Crea o inizia una nuova chat">
+            </div>
+
+            <!-- 04 chat-list -->
+            <div class="chat-list">
+               <ul>
+                  <li
+                     v-for="(contact, index) in contacts"
+                  >
+                     <div class="user-info">
+                        <div class="user-image">
+                           <img 
+                              :src=" 'assets/img/avatar' + contact.avatar + '.jpg'" 
+                              :alt="contact.nome"
+                           >
                
+                        </div>
+                        <div class="user-text">
+                           <h4>{{contact.nome}}</h4>
+                           <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p>
+                        </div>
+                        <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p>
+                     </div> 
+                  </li>
+               </ul>
             </div>
 
-            <div class="message-row clearfix">
-               <div class="single-message ricevuto">come stai?
-                  <p class="date">11/11/11</p>
-               </div>
-            </div>
-
-            <div class="message-row clearfix">
-               <div class="single-message inviato">scrivo codice
-                  <p class="date">11/11/11</p>
-               </div>
-            </div>
          </div>
 
-         <!-- input -->
-         <div class="wrap-bottom">
-            <i class="far fa-smile"></i>
-            <input type="text" placeholder="scrivi un messaggio">
-            <i class="fas fa-microphone"></i>
+         
+         <!-- PARTE DESTRA -->
+         <div class="wrap-right">
+
+            <!-- 01 top -->
+            <div class="wrap-top">
+               <!-- parte sinstra: utente -->
+               <div class="user-info">
+                  <div class="user-image">
+                     <img src="assets/img/avatar_1.jpg" alt="">
+                  </div>
+                  <div class="user-text">
+                     <h4>Michele</h4>
+                     <p>lorem</p>
+                  </div>
+               </div>
+
+               <!-- parte destra: icone -->
+               <div class="items">
+                  <i class="fas fa-search"></i>
+                  <i class="fas fa-paperclip"></i>
+                  <i class="fas fa-ellipsis-v"></i>
+               </div>
+            </div>
+
+            <!-- 02 parte centrale: chat-box -->
+            <div class="chat-box">
+               <div class="message-row clearfix">
+                  <div class="single-message ricevuto">tutto ok?
+                     <p class="date">11/11/11</p>
+                  </div>
+                  
+               </div>
+
+               <div class="message-row clearfix">
+                  <div class="single-message ricevuto">come stai?
+                     <p class="date">11/11/11</p>
+                  </div>
+               </div>
+
+               <div class="message-row clearfix">
+                  <div class="single-message inviato">scrivo codice
+                     <p class="date">11/11/11</p>
+                  </div>
+               </div>
+            </div>
+
+            <!-- 03 bottom: input -->
+            <div class="wrap-bottom">
+               <i class="far fa-smile"></i>
+               <input type="text" placeholder="scrivi un messaggio">
+               <i class="fas fa-microphone"></i>
+            </div>
          </div>
       </div>
-   </div>
    </div>
    
    

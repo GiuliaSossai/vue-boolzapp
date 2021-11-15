@@ -4,19 +4,21 @@
    margin: 0;
 }
 
-#app {
-   width: 100vw;
-   height: 100vh;
-   display: flex;
-   align-items: center;
-}
-
-
 body {
    height: 100vh;
    background-image: linear-gradient(#259687 150px, #DDDBD2 0px, #D2DBDB 100%);
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}   
+}
+
+#app, .notifiche, .input-box, .wrap-top, .wrap-bottom {
+   display: flex;
+   align-items: center;
+}
+
+#app {
+   width: 100vw;
+   height: 100vh;
+}
 
 .main-wrap {
    width: 80%;
@@ -27,7 +29,7 @@ body {
    display: flex;
 }
 
-/* PARTE SINISTRA */
+/***************** PARTE SINISTRA *******************/
 .wrap-left {
    width: 35%;
    height: 100%;
@@ -35,7 +37,7 @@ body {
    border-right: 1px solid #c8c8c8;
 }
 
-.wrap-left .wrap-top h4 {
+.wrap-left .wrap-top h4, .search-icon i {
    font-size: 20px;
 }
 
@@ -44,10 +46,13 @@ body {
 .notifiche {
    height: 80px;
    background-color: #8DDBFD;
-   display: flex;
-   align-items: center;
    padding: 0 20px;
    margin-bottom: 5px;
+}
+
+.notifiche .item-bg, .notifiche i{
+   width: 60px;
+   height: 60px;   
 }
 
 .notifiche i {
@@ -55,7 +60,6 @@ body {
    font-size: 25px;
    font-weight: bold;
    padding: 15px;
-   border-radius: 50%;
    background-color: #F1FBFE;
 }
 
@@ -68,8 +72,6 @@ body {
    width: 95%;
    margin: auto;
    background-color: #fff;
-   display: flex;
-   align-items: center;
    margin-bottom: 5px;
 }
 
@@ -77,9 +79,8 @@ body {
    display: inline-block;
 }
 
-.search-icon i {
-   font-size: 20px;
-   color: #b5b4af;   
+.search-icon i, .chat-list ul li p {
+   color: #B6B9BB;
 }
 
 .search-icon {
@@ -98,11 +99,11 @@ body {
    color: #cdcece;
 }
 
-/* cronologia chat */
+/* chat-list */
 .chat-list {
    background-color: #fff;
    width: 95%;
-   min-height: 400px;
+   height: calc(100% - 205px);
 }
 
 .chat-list ul {
@@ -114,17 +115,35 @@ body {
    border-bottom: 1px solid #F6F5F5;
 }
 
-.chat-list ul li p {
-   color: #B6B9BB;
+.chat-list ul li .user-image {
+   width: 60px;
+   height: 60px;
+}
+
+.chat-list ul li.active {
+   background-color: #E8ECEB;
+}
+
+.chat-list ul li:hover {
+   background-color: #F8F7F9;
+}
+
+.chat-list ul li .date, .user-text, .item-text {
+   font-size: 15px;
+}
+
+.item-text p, .user-text p, .chat-box .date {
+   color: #B6BABB;
+}
+
+.chat-list .user-info .date {
+   position: absolute;
+   top: 0;
+   right: 0;
 }
 
 
-
-
-
-
-
-/* PARTE DESTRA */
+/***************** PARTE DESTRA ***************/
 .wrap-right {
    width: 65%;
    height: 100%;
@@ -134,15 +153,12 @@ body {
 
 .wrap-top, .wrap-bottom {
    height: 80px;
-   display: flex;
    justify-content: space-between;
-   align-items: center;
    padding: 0 20px;
    font-size: 25px;
 }
 
-
-/* parte top */
+/* destra: parte top */
 .wrap-top {
    background-color: #EAEBEA;
    color: #B1B1B1;
@@ -152,12 +168,13 @@ body {
    position: relative;
 }
 
-.user-image, .user-text {
+.user-image, .user-text, .item-bg, .item-text {
    display: inline-block;
 }
 
-.user-image {
-   width: 60px;
+.user-image, .item-bg {
+   width: 50px;
+   height: 50px;
    border-radius: 50%;
    overflow: hidden;
    vertical-align: middle;
@@ -167,33 +184,25 @@ body {
    width: 100%;
 }
 
-.user-text {
-   font-size: 15px;
+.user-text, .item-text {
    vertical-align: middle;
    margin-left: 10px;
 }
 
-.user-text h4 {
+.user-text h4, .item-text h4 {
    color: #000;
    margin-bottom: 5px;
 }
 
-.user-text p {
+.wrap-top .user-text p, .notifiche .item-text p {
    color: #6B7375;
-}
-
-.user-info .date {
-   position: absolute;
-   top: 0;
-   right: 0;
 }
 
 .wrap-top i {
    padding: 5px;
 }
 
-
-/* parte centrale */
+/* destra: chat box */
 .chat-box {
    height: calc(100% - 160px);
    background-image: url(/assets/img/mine.jpg);
@@ -201,9 +210,14 @@ body {
 }
 
 .chat-box .message-row {
-   width: 100%;
-   
+   width: 100%;   
 }
+
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
 
 .chat-box .single-message {
    width: 40%;
@@ -213,18 +227,11 @@ body {
    position: relative;
 }
 
-.clearfix::after {
-   content: "";
-   clear: both;
-   display: table;
- }
-
  .message-row .date {
    position: absolute;
    right: 5px;
    bottom: 5px;
    font-size: 12px;
-   color: #6B7375;
  }
 
 /* classi per messaggi della chat */
@@ -238,8 +245,7 @@ body {
    background-color: #D4F9BA;
 }
 
-
-/* parte bottom */
+/* destra: parte bottom */
 .wrap-bottom {
    background-color: #F3EFE9;
    color: #6B7376;   
