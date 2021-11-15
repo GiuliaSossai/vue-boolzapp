@@ -75,9 +75,9 @@
                      </div>
                      <div class="user-text">
                         <h4>{{contact.nome}}</h4>
-                        <p>{{contact.messages.text}}</p>
+                        <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p>
                      </div>
-                     <p class="date">{{contact.messages.date}}</p>
+                     <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p>
                   </div> 
                 </li>
              </ul>
@@ -109,7 +109,26 @@
          </div>
 
          <!-- parte centrale con chat messaggi -->
-         <div class="chat-box"></div>
+         <div class="chat-box">
+            <div class="message-row clearfix">
+               <div class="single-message ricevuto">tutto ok?
+                  <p class="date">11/11/11</p>
+               </div>
+               
+            </div>
+
+            <div class="message-row clearfix">
+               <div class="single-message ricevuto">come stai?
+                  <p class="date">11/11/11</p>
+               </div>
+            </div>
+
+            <div class="message-row clearfix">
+               <div class="single-message inviato">scrivo codice
+                  <p class="date">11/11/11</p>
+               </div>
+            </div>
+         </div>
 
          <!-- input -->
          <div class="wrap-bottom">

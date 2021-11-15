@@ -10,17 +10,17 @@ const app = new Vue  ({
             messages: [
                {
                   date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  text: 'tutto ok?',
+                  status: 'ricevuto'
                },
                {
                   date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  text: 'cosa fai?',
+                  status: 'ricevuto'
                },
                {
                   date: '15/11/2021',
-                  text: 'tutto ok',
+                  text: 'scrivo codice',
                   status: 'inviato'
                }
             ]
@@ -33,18 +33,18 @@ const app = new Vue  ({
             messages: [
                {
                   date: '15/11/2021',
-                  text: 'tutto ok',
+                  text: 'ho fatto la torta',
                   status: 'inviato'
                },
                {
                   date: '15/11/2021',
-                  text: 'tutto ok',
+                  text: 'vieni?',
                   status: 'inviato'
                },
                {
                   date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  text: 'arrivo tra una oretta!',
+                  status: 'ricevuto'
                }
             ]
          },
@@ -52,6 +52,29 @@ const app = new Vue  ({
          {
             nome: 'Sofia',
             avatar: '_3',
+            visibile: true,
+            messages: [
+               {
+                  date: '15/11/2021',
+                  text: 'domani ci vediamo?',
+                  status: 'inviato'
+               },
+               {
+                  date: '15/11/2021',
+                  text: 'non possooooo',
+                  status: 'ricevuto'
+               },
+               {
+                  date: '15/11/2021',
+                  text: 'ho già un impegno',
+                  status: 'ricevuto'
+               }
+            ]
+         },
+
+         {
+            nome: 'Cecilia',
+            avatar: '_4',
             visibile: true,
             messages: [
                {
@@ -68,29 +91,6 @@ const app = new Vue  ({
                   date: '15/11/2021',
                   text: 'scrivo codice',
                   status: 'ricevuto'
-               }
-            ]
-         },
-
-         {
-            nome: 'Cecilia',
-            avatar: '_4',
-            visibile: true,
-            messages: [
-               {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
-               },
-               {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
-               },
-               {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
                }
             ]
          },

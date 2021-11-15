@@ -111,11 +111,14 @@ body {
 
 .chat-list ul li {
    padding: 10px;
+   border-bottom: 1px solid #F6F5F5;
 }
 
 .chat-list ul li p {
    color: #B6B9BB;
 }
+
+
 
 
 
@@ -154,7 +157,7 @@ body {
 }
 
 .user-image {
-   width: 50px;
+   width: 60px;
    border-radius: 50%;
    overflow: hidden;
    vertical-align: middle;
@@ -194,9 +197,46 @@ body {
 .chat-box {
    height: calc(100% - 160px);
    background-image: url(/assets/img/mine.jpg);
+   padding: 20px;
 }
 
+.chat-box .message-row {
+   width: 100%;
+   
+}
 
+.chat-box .single-message {
+   width: 40%;
+   padding: 15px;
+   border-radius: 8px;
+   margin: 20px 0;
+   position: relative;
+}
+
+.clearfix::after {
+   content: "";
+   clear: both;
+   display: table;
+ }
+
+ .message-row .date {
+   position: absolute;
+   right: 5px;
+   bottom: 5px;
+   font-size: 12px;
+   color: #6B7375;
+ }
+
+/* classi per messaggi della chat */
+.ricevuto {
+   float: left;
+   background-color: #FFFFFF;
+}
+
+.inviato {
+   float: right;
+   background-color: #D4F9BA;
+}
 
 
 /* parte bottom */
@@ -214,14 +254,4 @@ body {
 
 .wrap-bottom input::placeholder {
    color: #BABABA;
-}
-
-/* classi per messaggi della chat */
-
-li .ricevuto {
-   float: left;
-}
-
-li .inviato {
-   float: right;
 }
