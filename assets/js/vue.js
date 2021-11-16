@@ -9,17 +9,17 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
+                  date: '10/01/2020 15:30:55',
                   text: 'tutto ok?',
                   status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
+                  date: '10/01/2020 15:50:00',
                   text: 'cosa fai?',
                   status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
+                  date: '10/01/2020 16:15:22',
                   text: 'scrivo codice',
                   status: 'inviato'
                }
@@ -32,18 +32,18 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
-                  text: 'ho fatto la torta',
+                  date: '28/03/2020 10:10:40',
+                  text: 'la Marianna va in campagna',
+                  status: 'ricevuto'
+               },
+               {
+                  date: '28/03/2020 10:20:10',
+                  text: 'scusa?',
                   status: 'inviato'
                },
                {
-                  date: '15/11/2021',
-                  text: 'vieni?',
-                  status: 'inviato'
-               },
-               {
-                  date: '15/11/2021',
-                  text: 'arrivo tra una oretta!',
+                  date: '28/03/2020 16:15:22',
+                  text: 'scusa ho sbagliato chat!',
                   status: 'ricevuto'
                }
             ]
@@ -55,17 +55,17 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
+                  date: '28/03/2020 10:10:40',
                   text: 'domani ci vediamo?',
                   status: 'inviato'
                },
                {
-                  date: '15/11/2021',
+                  date: '28/03/2020 10:20:10',
                   text: 'non possooooo',
                   status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
+                  date: '28/03/2020 16:15:22',
                   text: 'ho già un impegno',
                   status: 'ricevuto'
                }
@@ -78,18 +78,18 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok?',
+                  date: '10/01/2020 15:30:55',
+                  text: 'andiamo al cinema domani?',
                   status: 'inviato'
                },
                {
-                  date: '15/11/2021',
-                  text: 'cosa fai?',
-                  status: 'inviato'
+                  date: '10/01/2020 15:50:00',
+                  text: 'certooooo',
+                  status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
-                  text: 'scrivo codice',
+                  date: '10/01/2020 16:50:00',
+                  text: 'cosa andiamo a vedere?',
                   status: 'ricevuto'
                }
             ]
@@ -101,18 +101,13 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  date: '21/01/2020 17:50:00',
+                  text: 'mangiamo la pizza stasera?',
+                  status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
-               },
-               {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
+                  date: '21/01/2020 17:54:00',
+                  text: 'ovvio che siiiiiiii',
                   status: 'inviato'
                }
             ]
@@ -124,7 +119,7 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
+                  date: '21/01/2020 17:54:00',
                   text: 'tutto ok',
                   status: 'inviato'
                },

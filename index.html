@@ -103,7 +103,7 @@
                   </div>
                   <div class="user-text">
                      <h4>{{contacts[activeIndex].nome}}</h4>
-                     <p>ultimo accesso:</p>
+                     <p>ultimo accesso: {{contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date}}</p>
                   </div>
                </div>
 
@@ -116,25 +116,21 @@
             </div>
 
             <!-- 02 parte centrale: chat-box -->
+            <!-- ciclo v-for per ottenere chat con i messaggi -->
             <div class="chat-box">
-               <div class="message-row clearfix">
-                  <div class="single-message ricevuto">tutto ok?
-                     <p class="date">11/11/11</p>
+               <div 
+                  class="message-row clearfix"
+                  v-for="(message, index) in contacts[activeIndex].messages"   
+               >
+                  <div 
+                     class="single-message"
+                     :class="[message.status === 'inviato' ? 'inviato' : 'ricevuto' ]"
+                  >{{message.text}}
+                     <p class="date">{{message.date}}</p>
                   </div>
                   
                </div>
 
-               <div class="message-row clearfix">
-                  <div class="single-message ricevuto">come stai?
-                     <p class="date">11/11/11</p>
-                  </div>
-               </div>
-
-               <div class="message-row clearfix">
-                  <div class="single-message inviato">scrivo codice
-                     <p class="date">11/11/11</p>
-                  </div>
-               </div>
             </div>
 
             <!-- 03 bottom: input -->
@@ -148,9 +144,6 @@
    </div>
    
    
-
-
-
 
 
    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
