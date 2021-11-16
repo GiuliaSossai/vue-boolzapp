@@ -139,7 +139,12 @@
             <!-- 03 bottom: input -->
             <div class="wrap-bottom">
                <i class="far fa-smile"></i>
-               <input type="text" placeholder="scrivi un messaggio">
+               <input 
+                  type="text" 
+                  placeholder="scrivi un messaggio"
+                  v-model.trim="nuovoTesto"
+                  @keyup.enter="inserisciMessaggio"
+               >
                <i class="fas fa-microphone"></i>
             </div>
          </div>

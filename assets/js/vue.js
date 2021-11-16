@@ -7,7 +7,7 @@ const app = new Vue  ({
          avatar: '_io',
          visibile: true
       },
-      
+
       contacts: [
          {
             nome: 'Michele',
@@ -220,14 +220,27 @@ const app = new Vue  ({
 
       ],
 
-      activeIndex: 0
+      activeIndex: 0,
 
-      
+      nuovoTesto: ''
 
    },
 
    methods:{
-      
+      inserisciMessaggio(){
+         
+         //devo inserire la stringa di testo nell'array messages che a sua volta fa parte dell'array contacts
+         //prima creo nuovo oggetto
+         const newMsg = {
+            date: 'oggi',
+            text: this.nuovoTesto,
+            status: 'inviato'
+         }
+         console.log('nuovo messaggio', newMsg);
+         this.contatcs[this.activeIndex].messages.push(newMsg);
+
+         this.nuovoTesto = '';
+      }
 
       
    }
