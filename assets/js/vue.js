@@ -189,7 +189,7 @@ const app = new Vue  ({
 
       ],
 
-      activeContact: 0
+      activeIndex: 0
 
       
 

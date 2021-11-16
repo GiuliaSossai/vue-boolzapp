@@ -63,8 +63,8 @@
                <ul>
                   <li
                      v-for="(contact, index) in contacts"
-                     @click="activeContact = index"
-                     :class="{active: activeContact === index}"
+                     @click="activeIndex = index"
+                     :class="{active: activeIndex === index}"
                   >
                      <div class="user-info">
                         <div class="user-image">
@@ -93,13 +93,17 @@
             <!-- 01 top -->
             <div class="wrap-top">
                <!-- parte sinstra: utente -->
+               <!-- utente visualizzato deve essere quello attivo! -->
                <div class="user-info">
                   <div class="user-image">
-                     <img src="assets/img/avatar_1.jpg" alt="">
+                     <img 
+                        :src=" `assets/img/avatar${contacts[activeIndex].avatar}.jpg` " 
+                        :alt=" `${contacts[activeIndex].nome}` "
+                     >
                   </div>
                   <div class="user-text">
-                     <h4>Michele</h4>
-                     <p>lorem</p>
+                     <h4>{{contacts[activeIndex].nome}}</h4>
+                     <p>ultimo accesso:</p>
                   </div>
                </div>
 
