@@ -237,7 +237,7 @@ const app = new Vue  ({
             status: 'inviato'
          }
          console.log('nuovo messaggio', newMsg);
-         this.contatcs[this.activeIndex].messages.push(newMsg);
+         this.contacts[this.activeIndex].messages.push(newMsg);
 
          this.nuovoTesto = '';
       }
