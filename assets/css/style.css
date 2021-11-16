@@ -98,7 +98,7 @@ body {
 
 .input-box input:focus {
    outline: 0 none;
-   border: 1px solid blue;
+   border: 1px solid #005FCC;
    border-left: 0;
 }
 

@@ -24,10 +24,12 @@
                <!-- parte sinstra: utente -->
                <div class="user-info">
                   <div class="user-image">
-                     <img src="assets/img/avatar_io.jpg" alt="">
+                     <img 
+                        :src=" 'assets/img/avatar' + user.avatar + '.jpg'" 
+                        :alt="user.nome">
                   </div>
                   <div class="user-text">
-                     <h4>Gaia</h4>
+                     <h4>{{user.nome}}</h4>
                   </div>
                </div>
 
