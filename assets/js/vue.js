@@ -172,12 +172,42 @@ const app = new Vue  ({
                {
                   date: '25/12/2021 11:41:00',
                   text: 'stiamo facendo il pupazzo di neve!!',
-                  status: 'ricevuto'
+                  status: 'inviato'
                },
                {
                   date: '25/12/2021 12:11:00',
                   text: 'che fortunati che avete la neve!!',
+                  status: 'ricevuto'
+               },
+               {
+                  date: '25/12/2021 11:41:00',
+                  text: 'qui non nevicherà mai',
+                  status: 'ricevuto'
+               },
+               {
+                  date: '25/12/2021 11:41:00',
+                  text: 'potete venirci a trovare!!',
                   status: 'inviato'
+               },
+               {
+                  date: '25/12/2021 11:41:00',
+                  text: 'la casa è piccola ma in qualche modo si farà',
+                  status: 'inviato'
+               },
+               {
+                  date: '25/12/2021 11:41:00',
+                  text: 'abbiamo sempre posto per amici mici',
+                  status: 'inviato'
+               },
+               {
+                  date: '25/12/2021 11:41:00',
+                  text: 'dici davvero???',
+                  status: 'ricevuto'
+               },
+               {
+                  date: '25/12/2021 11:41:00',
+                  text: 'ne parliamo un attimo tra poco e poi ti so dire, grazieeeeeee',
+                  status: 'ricevuto'
                }
             ]
          }
