@@ -50,7 +50,7 @@ const app = new Vue  ({
          },
 
          {
-            nome: 'Sofia',
+            nome: 'Giacomo',
             avatar: '_3',
             visibile: true,
             messages: [
@@ -73,7 +73,7 @@ const app = new Vue  ({
          },
 
          {
-            nome: 'Cecilia',
+            nome: 'Mario',
             avatar: '_4',
             visibile: true,
             messages: [
@@ -96,7 +96,7 @@ const app = new Vue  ({
          },
 
          {
-            nome: 'Anna',
+            nome: 'Paolo',
             avatar: '_5',
             visibile: true,
             messages: [
@@ -114,7 +114,7 @@ const app = new Vue  ({
          },
 
          {
-            nome: 'Giacomo',
+            nome: 'Cecilia',
             avatar: '_6',
             visibile: true,
             messages: [
@@ -155,7 +155,7 @@ const app = new Vue  ({
          },
 
          {
-            nome: 'Sveva',
+            nome: 'Fabio',
             avatar: '_8',
             visibile: true,
             messages: [
