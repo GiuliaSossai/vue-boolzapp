@@ -119,19 +119,19 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '21/01/2020 17:54:00',
-                  text: 'tutto ok',
+                  date: '10/10/2020 09:11:10',
+                  text: 'tutto ok?',
                   status: 'inviato'
                },
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  date: '11/10/2020 09:30:10',
+                  text: 'scusa ero in montagna e il cell non prendeva',
+                  status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  date: '11/10/2020 09:31:10',
+                  text: 'weekend bellissimo!',
+                  status: 'ricevuto'
                }
             ]
          },
@@ -142,19 +142,14 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
+                  date: '31/10/2021 21:21:21',
+                  text: 'state arrivando???',
                   status: 'inviato'
                },
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
-               },
-               {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  date: '31/10/2021 21:41:21',
+                  text: 'la macchina non partiva!! arriviamo!',
+                  status: 'ricevuto'
                }
             ]
          },
@@ -165,18 +160,23 @@ const app = new Vue  ({
             visibile: true,
             messages: [
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
+                  date: '25/12/2021 10:41:21',
+                  text: 'auguriiiii',
                   status: 'inviato'
                },
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
-                  status: 'inviato'
+                  date: '25/12/2021 10:56:00',
+                  text: 'grazie! anche a voi!!',
+                  status: 'ricevuto'
                },
                {
-                  date: '15/11/2021',
-                  text: 'tutto ok',
+                  date: '25/12/2021 11:41:00',
+                  text: 'stiamo facendo il pupazzo di neve!!',
+                  status: 'ricevuto'
+               },
+               {
+                  date: '25/12/2021 12:11:00',
+                  text: 'che fortunati che avete la neve!!',
                   status: 'inviato'
                }
             ]

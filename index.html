@@ -117,6 +117,7 @@
 
             <!-- 02 parte centrale: chat-box -->
             <!-- ciclo v-for per ottenere chat con i messaggi -->
+            <!-- con operatore ternario sarebbe :class="[message.status === 'inviato' ? 'inviato' : 'ricevuto' ]" -->
             <div class="chat-box">
                <div 
                   class="message-row clearfix"
@@ -124,7 +125,7 @@
                >
                   <div 
                      class="single-message"
-                     :class="[message.status === 'inviato' ? 'inviato' : 'ricevuto' ]"
+                     :class="message.status"
                   >{{message.text}}
                      <p class="date">{{message.date}}</p>
                   </div>
