@@ -222,7 +222,9 @@ const app = new Vue  ({
 
       activeIndex: 0,
 
-      nuovoTesto: ''
+      nuovoTesto: '',
+
+      inputValue: ''
 
    },
 
@@ -244,7 +246,7 @@ const app = new Vue  ({
          //devo inserire la stringa di testo nell'array messages che a sua volta fa parte dell'array contacts
          //prima creo nuovo oggetto
          const newMsg = {
-            date: 'oggi',
+            date: 'oggi adesso',
             text: this.nuovoTesto,
             status: 'inviato'
          }
@@ -256,15 +258,41 @@ const app = new Vue  ({
          //dopo 1 secondo ricevo messaggio di risposta:
          setTimeout(() => {
             const answerMsg = {
-               date: 'dopo 1s',
+               date: 'oggi dopo 1s',
                text: 'va bene!!',
                status: 'ricevuto'
             }
 
             this.contacts[this.activeIndex].messages.push(answerMsg);
          }, 1000);
-      }
+      },
 
+      typeLetter(){
+         console.log('stai scrivendo');
+         /**
+          * devo controllare che le lettere che scrivo siano contenute o meno trai i nomi dei contatti
+          * faccio ciclo su contacts
+          * se contact.name non contiene le lettere non lo devo far vedere (visibile è false)
+          * quando l'input torna vuoto devo mettere tutti i contatti visibili
+          */
+
+         let inputValue = '';
+
+         for (let contact of this.contacts){
+            if(!contact.nome.toLowerCase().includes(this.inputValue.toLowerCase())){
+               contact.visibile = false;
+            }
+            console.log('testo input', this.inputValue);
+            
+            if(this.inputValue === ''){
+               contact.visibile = true;
+            }
+            
+         }
+
+         
+      }
+      
       
    }
 

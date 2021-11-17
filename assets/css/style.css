@@ -109,7 +109,6 @@ body {
 /* chat-list */
 .chat-list {
    background-color: #fff;
-   width: 95%;
    height: calc(100% - 207px);
    overflow-y: scroll;
 }

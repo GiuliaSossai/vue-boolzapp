@@ -53,11 +53,18 @@
             </div>
 
             <!-- 03 input -->
+            <!-- triggero input con keyup -->
             <div class="input-box">
                <div class="search-icon">
                   <i class="fas fa-search"></i>
                </div>
-               <input type="text" placeholder="Crea o inizia una nuova chat">
+               <input 
+                  type="text" 
+                  placeholder="Crea o inizia una nuova chat"
+                  v-model.trim="inputValue"
+                  @keyup="typeLetter()"
+               >
+               
             </div>
 
             <!-- 04 chat-list -->
@@ -67,6 +74,7 @@
                      v-for="(contact, index) in contacts"
                      @click="activeIndex = index"
                      :class="{active: activeIndex === index}"
+                     v-if="(contact.visibile === true) || (inputValue === '')"
                   >
                      <div class="user-info">
                         <div class="user-image">
