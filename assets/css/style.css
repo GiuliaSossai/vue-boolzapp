@@ -235,11 +235,48 @@ body {
    position: relative;
 }
 
- .message-row .date {
+ .single-message .date {
    position: absolute;
    right: 5px;
    bottom: 5px;
    font-size: 10px;
+ }
+
+ /* comportamento menu tendina */
+ .single-message i {
+   display: none;
+   color: #B6B9BB;
+   position: absolute;
+   right: 8px;
+   top: 5px;
+   font-size: 12px;
+ }
+
+ .single-message:hover i {
+   display: block;
+ }
+
+ .menu-box {
+   display: none;
+   width: 200px;
+   background-color: #FEFCFE;
+   z-index: 999;
+   position: absolute;
+   right: 8px;
+   top: 20px;
+   box-shadow: 2px 0 3px rgba(0, 0, 0, .5);
+ }
+
+ .menu-box.active {
+   display: block;
+ }
+
+ .menu-box p {
+   padding: 20px;
+ }
+
+ .menu-box p:hover {
+   background-color: #dfdede;
  }
 
 /* classi per messaggi della chat */

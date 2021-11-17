@@ -70,6 +70,7 @@
             <!-- 04 chat-list -->
             <div class="chat-list">
                <ul>
+                  <!-- al click su un contatto faccio coincidere il suo indice con l'indice del contatto attivo e aggiungo anche la classe -->
                   <!-- stampo tutta la lista dei contatti quando visibile è uguale a true e non c'è scritto niente dentro input -->
                   <li
                      v-for="(contact, index) in contacts"
@@ -141,6 +142,21 @@
                      :class="message.status"
                   >{{message.text}}
                      <p class="date">{{message.date}}</p>
+                     <!-- se clicco una volta su chevron, vedo menu, se clicco una seconda volta menu si chiude -->
+                     <!-- @click="openMenu = !openMenu" -->
+                     <!-- :class="{active: openMenu}" -->
+                     <i 
+                        class="fas fa-chevron-down"
+                        @click="openMenu"
+                     >
+                     </i>
+                     <div 
+                        class="menu-box"
+                        
+                     >
+                        <p>Message info</p>
+                        <p>Delete message</p>
+                     </div>
                   </div>
                   
                </div>
