@@ -310,13 +310,15 @@ const app = new Vue  ({
 
       openMenu(index){
          console.log('hai cliccato lo chevron');
-         //quando clicco su chevron, menu-box deve diventare active: il tutto riferito al messaggio su cui clicco per cui devo usare indice de array messages
-         // menu = document.querySelector('.menu-box');
-         // menu.classList.add('active');
-         //toggleClass('active');
+         //quando clicco su chevron, menu-box deve diventare active: il tutto riferito al messaggio su cui clicco per cui devo usare indice di messages
 
          menu = document.querySelector('.menu-box');
          menu.classList.toggle('active');
+
+         // for (let message of this.contacts[this.activeIndex].messages){
+         //    console.log(this.message[index]);
+         // }
+         
 
       }
       
