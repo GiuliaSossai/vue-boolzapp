@@ -227,8 +227,20 @@ const app = new Vue  ({
    },
 
    methods:{
+      getLastMsg(index){
+         let lastMsg = this.contacts[index].messages[this.contacts[index].messages.length -1].text;
+         if(lastMsg.length > 10){
+            lastMsg = lastMsg.slice(0, 10)+"...";
+         }
+         return lastMsg;
+      },
+
+      getLastDate(index){
+         let lastDate = this.contacts[index].messages[this.contacts[index].messages.length -1].date;
+         return lastDate;
+      },
+
       inserisciMessaggio(){
-         
          //devo inserire la stringa di testo nell'array messages che a sua volta fa parte dell'array contacts
          //prima creo nuovo oggetto
          const newMsg = {
@@ -240,6 +252,17 @@ const app = new Vue  ({
          this.contacts[this.activeIndex].messages.push(newMsg);
 
          this.nuovoTesto = '';
+
+         //dopo 1 secondo ricevo messaggio di risposta:
+         setTimeout(() => {
+            const answerMsg = {
+               date: 'dopo 1s',
+               text: 'va bene!!',
+               status: 'ricevuto'
+            }
+
+            this.contacts[this.activeIndex].messages.push(answerMsg);
+         }, 1000);
       }
 
       

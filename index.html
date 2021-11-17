@@ -77,10 +77,12 @@
                
                         </div>
                         <div class="user-text">
+                           <!-- <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p> -->
+                           <!-- <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p> -->
                            <h4>{{contact.nome}}</h4>
-                           <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p>
+                           <p>{{getLastMsg(index)}}</p>
                         </div>
-                        <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p>
+                        <p class="date">{{getLastDate(index)}}</p>
                      </div> 
                   </li>
                </ul>
