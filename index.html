@@ -70,6 +70,7 @@
             <!-- 04 chat-list -->
             <div class="chat-list">
                <ul>
+                  <!-- stampo tutta la lista dei contatti quando visibile è uguale a true e non c'è scritto niente dentro input -->
                   <li
                      v-for="(contact, index) in contacts"
                      @click="activeIndex = index"

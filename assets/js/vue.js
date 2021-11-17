@@ -242,11 +242,25 @@ const app = new Vue  ({
          return lastDate;
       },
 
+      getTimeNow(){
+         const d = new Date();
+         const time = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+
+         return time;
+      },
+
       inserisciMessaggio(){
+         const dateObj = new Date();
+         const month = dateObj.getUTCMonth() + 1;
+         const day = dateObj.getUTCDate();
+         const year = dateObj.getUTCFullYear();
+
+         let newdate = day + "/" + month + "/" + year;
+
          //devo inserire la stringa di testo nell'array messages che a sua volta fa parte dell'array contacts
          //prima creo nuovo oggetto
          const newMsg = {
-            date: 'oggi adesso',
+            date: newdate + " " + this.getTimeNow(),
             text: this.nuovoTesto,
             status: 'inviato'
          }
@@ -257,8 +271,9 @@ const app = new Vue  ({
 
          //dopo 1 secondo ricevo messaggio di risposta:
          setTimeout(() => {
+
             const answerMsg = {
-               date: 'oggi dopo 1s',
+               date: newdate + " " + this.getTimeNow(),
                text: 'va bene!!',
                status: 'ricevuto'
             }
@@ -283,7 +298,7 @@ const app = new Vue  ({
                contact.visibile = false;
             }
             console.log('testo input', this.inputValue);
-            
+
             if(this.inputValue === ''){
                contact.visibile = true;
             }
