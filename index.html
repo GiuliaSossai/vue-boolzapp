@@ -41,6 +41,7 @@
                </div>
             </div>
 
+
             <!-- 02 notifiche -->
             <div class="notifiche">
                <div class="item-bg">
@@ -51,6 +52,7 @@
                   <p>Attiva notifiche desktop</p>
                </div>   
             </div>
+
 
             <!-- 03 input -->
             <!-- triggero input con keyup -->
@@ -66,6 +68,7 @@
                >
                
             </div>
+
 
             <!-- 04 chat-list -->
             <div class="chat-list">
@@ -87,6 +90,7 @@
                
                         </div>
                         <div class="user-text">
+                           
                            <!-- <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p> -->
                            <!-- <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p> -->
                            <h4>{{contact.nome}}</h4>
@@ -107,6 +111,7 @@
             <!-- 01 top -->
             <div class="wrap-top">
                <!-- parte sinstra: utente -->
+
                <!-- utente visualizzato deve essere quello attivo! -->
                <div class="user-info">
                   <div class="user-image">
@@ -129,7 +134,9 @@
                </div>
             </div>
 
+
             <!-- 02 parte centrale: chat-box -->
+
             <!-- ciclo v-for per ottenere chat con i messaggi -->
             <!-- con operatore ternario sarebbe :class="[message.status === 'inviato' ? 'inviato' : 'ricevuto' ]" -->
             <div class="chat-box">
@@ -142,26 +149,28 @@
                      :class="message.status"
                   >{{message.text}}
                      <p class="date">{{message.date}}</p>
-                     <!-- se clicco una volta su chevron, vedo menu, se clicco una seconda volta menu si chiude -->
-                     <!-- @click="openMenu = !openMenu" -->
-                     <!-- :class="{active: openMenu}" -->
                      <i 
                         class="fas fa-chevron-down"
                         @click="openMenu(index)"
                      >
                      </i>
+
+                     <!-- con v-show i due indici combaciano e quindi sto dicendo di aprire il menu proprio di quel messaggio-->
                      <div 
                         class="menu-box"
-                        
+                        v-show="shownMsg === index"
                      >
                         <p>Message info</p>
-                        <p>Delete message</p>
+
+                        <!-- richiamo anche openMenu così al toggle il menu sparisce -->
+                        <p @click="eliminaMsg(index), openMenu(index)">Delete message</p>
                      </div>
                   </div>
                   
                </div>
 
             </div>
+
 
             <!-- 03 bottom: input -->
             <div class="wrap-bottom">

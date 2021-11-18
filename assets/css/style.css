@@ -42,7 +42,7 @@ body {
 }
 
 
-/* notifiche */
+/* NOTIFICHE */
 .notifiche {
    height: 80px;
    background-color: #8DDBFD;
@@ -67,7 +67,7 @@ body {
    text-decoration: underline;
 }
 
-/* input box */
+/* INPUT BOX */
 .input-box {
    width: 95%;
    margin: auto;
@@ -106,7 +106,7 @@ body {
    color: #cdcece;
 }
 
-/* chat-list */
+/* CHAT LIST */
 .chat-list {
    background-color: #fff;
    height: calc(100% - 207px);
@@ -165,7 +165,7 @@ body {
    font-size: 25px;
 }
 
-/* destra: parte top */
+/* destra: PARTE TOP */
 .wrap-top {
    background-color: #EAEBEA;
    color: #B1B1B1;
@@ -209,7 +209,7 @@ body {
    padding: 5px;
 }
 
-/* destra: chat box */
+/* destra: CHAT BOX */
 .chat-box {
    height: calc(100% - 160px);
    background-image: url(/assets/img/mine.jpg);
@@ -242,7 +242,7 @@ body {
    font-size: 10px;
  }
 
- /* comportamento menu tendina */
+ /* MENU MESSAGGIO */
  .single-message i {
    display: none;
    color: #B6B9BB;
@@ -257,18 +257,15 @@ body {
  }
 
  .menu-box {
-   display: none;
    width: 200px;
    background-color: #FEFCFE;
    z-index: 999;
    position: absolute;
    right: 8px;
    top: 20px;
-   box-shadow: 2px 0 3px rgba(0, 0, 0, .5);
- }
-
- .menu-box.active {
-   display: block;
+   box-shadow: 0 3px 5px rgba(0, 0, 0, .5);
+   border-radius: 3px;
+   overflow: hidden;
  }
 
  .menu-box p {
@@ -279,7 +276,7 @@ body {
    background-color: #dfdede;
  }
 
-/* classi per messaggi della chat */
+/* CLASSI PER MESSAGGI INVIATO-RICEVUTO */
 .ricevuto {
    float: left;
    background-color: #FFFFFF;
@@ -290,7 +287,7 @@ body {
    background-color: #D4F9BA;
 }
 
-/* destra: parte bottom */
+/* destra: PARTE BOTTOM */
 .wrap-bottom {
    background-color: #F3EFE9;
    color: #6B7376;   

@@ -224,11 +224,14 @@ const app = new Vue  ({
 
       nuovoTesto: '',
 
-      inputValue: ''
+      inputValue: '',
+
+      shownMsg: -1
 
    },
 
    methods:{
+
       getLastMsg(index){
          let lastMsg = this.contacts[index].messages[this.contacts[index].messages.length -1].text;
          if(lastMsg.length > 10){
@@ -245,7 +248,6 @@ const app = new Vue  ({
       getTimeNow(){
          const d = new Date();
          const time = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
-
          return time;
       },
 
@@ -254,34 +256,39 @@ const app = new Vue  ({
          const month = dateObj.getUTCMonth() + 1;
          const day = dateObj.getUTCDate();
          const year = dateObj.getUTCFullYear();
-
          return newdate = day + "/" + month + "/" + year;
       },
 
       inserisciMessaggio(){
          //devo inserire la stringa di testo nell'array messages che a sua volta fa parte dell'array contacts
-         //prima creo nuovo oggetto
-         const newMsg = {
-            date: this.getDateNow() + " " + this.getTimeNow(),
-            text: this.nuovoTesto,
-            status: 'inviato'
-         }
-         console.log('nuovo messaggio', newMsg);
-         this.contacts[this.activeIndex].messages.push(newMsg);
-
-         this.nuovoTesto = '';
-
-         //dopo 1 secondo ricevo messaggio di risposta:
-         setTimeout(() => {
-
-            const answerMsg = {
+         
+         //solo se scrivo almeno un carattere faccio partire la funzione
+         if(this.nuovoTesto.length > 0){
+            //prima creo nuovo oggetto
+            const newMsg = {
                date: this.getDateNow() + " " + this.getTimeNow(),
-               text: 'va bene!!',
-               status: 'ricevuto'
+               text: this.nuovoTesto,
+               status: 'inviato'
             }
+            console.log('nuovo messaggio', newMsg);
+            this.contacts[this.activeIndex].messages.push(newMsg);
+   
+            this.nuovoTesto = '';
 
-            this.contacts[this.activeIndex].messages.push(answerMsg);
-         }, 1000);
+            //dopo 1 secondo ricevo messaggio di risposta:
+            setTimeout(() => {
+
+               const answerMsg = {
+                  date: this.getDateNow() + " " + this.getTimeNow(),
+                  text: 'va bene!!',
+                  status: 'ricevuto'
+               }
+
+               this.contacts[this.activeIndex].messages.push(answerMsg);
+            }, 1000);
+         }
+         
+         
       },
 
       typeLetter(){
@@ -310,16 +317,19 @@ const app = new Vue  ({
 
       openMenu(index){
          console.log('hai cliccato lo chevron');
-         //quando clicco su chevron, menu-box deve diventare active: il tutto riferito al messaggio su cui clicco per cui devo usare indice di messages
+         //ho impostato una variabile globale shownMsg a -1;
+         //quando clicco su chevron, devo confrontare shownMsg e l'indice del messaggio relativo. Per visualizzare il menu relativo a ogni messaggio, i due indici devono combaciare
 
-         menu = document.querySelector('.menu-box');
-         menu.classList.toggle('active');
+         if(this.shownMsg === -1){
+            this.shownMsg = index;
+         } else {
+            this.shownMsg = -1;
+         }
+      },
 
-         // for (let message of this.contacts[this.activeIndex].messages){
-         //    console.log(this.message[index]);
-         // }
-         
-
+      eliminaMsg(index){
+         console.log('sei dentro elimina messaggio')
+         this.contacts[this.activeIndex].messages.splice(index, 1);
       }
       
       
