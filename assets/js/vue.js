@@ -317,8 +317,8 @@ const app = new Vue  ({
 
       openMenu(index){
          console.log('hai cliccato lo chevron');
-         //ho impostato una variabile globale shownMsg a -1;
-         //quando clicco su chevron, devo confrontare shownMsg e l'indice del messaggio relativo. Per visualizzare il menu relativo a ogni messaggio, i due indici devono combaciare
+         //ho impostato una variabile globale shownMsg a -1 (perché valore indice array non valido);
+         //quando clicco su chevron, devo confrontare shownMsg e l'indice del messaggio relativo. Per visualizzare il menu relativo a ogni messaggio, i due indici devono combaciare. Quando variabile è -1, allora diventa uguale a indice del messaggio su cui sto cliccando e tramite v-show do questa condizione al menu
 
          if(this.shownMsg === -1){
             this.shownMsg = index;
