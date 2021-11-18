@@ -74,7 +74,7 @@
             <div class="chat-list">
                <ul>
                   <!-- al click su un contatto faccio coincidere il suo indice con l'indice del contatto attivo e aggiungo anche la classe -->
-                  <!-- stampo tutta la lista dei contatti quando visibile è uguale a true e non c'è scritto niente dentro input -->
+                  <!-- stampo tutta la lista dei contatti quando visibile è uguale a true o non c'è scritto niente dentro input - tipo all'avvio della pagina -->
                   <li
                      v-for="(contact, index) in contacts"
                      @click="activeIndex = index"
@@ -90,7 +90,7 @@
                
                         </div>
                         <div class="user-text">
-                           
+
                            <!-- <p>{{contact.messages[contact.messages.length - 1].text.slice(0, 8)}}...</p> -->
                            <!-- <p class="date">{{contact.messages[contact.messages.length - 1].date}}</p> -->
                            <h4>{{contact.nome}}</h4>
@@ -122,7 +122,9 @@
                   </div>
                   <div class="user-text">
                      <h4>{{contacts[activeIndex].nome}}</h4>
-                     <p>ultimo accesso: {{contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date}}</p>
+                     <!-- a seconda della lunghezza dell'array messages stampo o meno la data -->
+                     <p v-if="contacts[activeIndex].messages.length > 0">ultimo accesso: {{contacts[activeIndex].messages[contacts[activeIndex].messages.length - 1].date}}</p>
+                     <p v-else>Inizia la conversazione con {{contacts[activeIndex].nome}}!</p>
                   </div>
                </div>
 

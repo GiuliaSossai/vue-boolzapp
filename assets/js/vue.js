@@ -233,16 +233,22 @@ const app = new Vue  ({
    methods:{
 
       getLastMsg(index){
-         let lastMsg = this.contacts[index].messages[this.contacts[index].messages.length -1].text;
-         if(lastMsg.length > 10){
-            lastMsg = lastMsg.slice(0, 10)+"...";
-         }
-         return lastMsg;
+         //faccio controllo se array di messaggi è vuoto
+         if(this.contacts[index].messages.length > 0) {
+            let lastMsg = this.contacts[index].messages[this.contacts[index].messages.length -1].text;
+            if(lastMsg.length > 10){
+               lastMsg = lastMsg.slice(0, 10)+"...";
+            }
+            return lastMsg;
+         }   
       },
 
       getLastDate(index){
-         let lastDate = this.contacts[index].messages[this.contacts[index].messages.length -1].date;
-         return lastDate;
+         //faccio controllo se array di messaggi è vuoto
+         if(this.contacts[index].messages.length > 0){
+            let lastDate = this.contacts[index].messages[this.contacts[index].messages.length -1].date;
+            return lastDate;
+         }  
       },
 
       getTimeNow(){
@@ -330,6 +336,7 @@ const app = new Vue  ({
       eliminaMsg(index){
          console.log('sei dentro elimina messaggio')
          this.contacts[this.activeIndex].messages.splice(index, 1);
+         console.log(this.contacts[this.activeIndex].messages);
       }
       
       
