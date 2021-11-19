@@ -212,7 +212,7 @@ body {
 /* destra: CHAT BOX */
 .chat-box {
    height: calc(100% - 160px);
-   background-image: url(/assets/img/mine.jpg);
+   background-image: url('../img/mine.jpg');
    padding: 40px;
    overflow-y: scroll;
 }
